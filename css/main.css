@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;
+}
+.hero{
+    padding: 100px 0 60px;
+}
+.hero h5{
+    padding-top: 100px;
+    font-size:30px;
+}
+.hero h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.main-img img{
+    width: 400px;
+}
+
+.services{
+    padding: 100px 80px 60px;
+    height:auto;
+}
+
+.services h1{
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+.rowsetting{
+    margin-top: 80px;
+}
+.portfolio{
+    padding: 100px 0px 60px;
+    height:auto;
+}
+.portfolio h1{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.contact{
+    padding: 100px 0px 60px;
+    height:auto; 
+
+}
+.contact h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.navbar a:hover {
+    font-size: large;
+    font-weight: bold;
+}
+
+  
