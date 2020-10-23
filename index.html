@@ -46,11 +46,11 @@
     <section class="hero">
         <div class="container d-flex justify-content-between items-center mx-auto ">
             <div class="row">
-            <div class="main-text col-md-8">
+            <div class="main-text col-md-8 col-sm-8">
                 <h5>welcome to</h5>
                 <h1> <span class="text-warning">INTABS</span> SOLUTIONS</h1>
             </div>
-            <div class="main-img col-md-4">
+            <div class="main-img col-md-4 col-sm-4 col-10">
                 <img src="/images/draw2.png" alt="">
             </div>
         </div>
@@ -236,31 +236,31 @@
                  hours to help you.</p>
             <div class="row">
                 <div class="col-md-9 mb-md-0 mb-5 mt-3">
-                    <form>
+                    <form action="#" name="registration">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="name" id="name" class="form-control">
                                     <label for="name" class="">Your name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
-                                    <input type="email" class="form-control">
-                                    <label for="name" class="">Your email</label>
+                                    <input type="email" name="email" id="email" class="form-control">
+                                    <label for="email" class="">Your email</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="md-form mb-0">
-                                    <input type="text" class="form-control">
-                                    <label for="name" class="">Subject</label>
+                                    <input type="text" name="subject" id="subject" class="form-control">
+                                    <label for="Subject" class="">Subject</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="md-form">
-                                    <textarea type="text" rows="2" class="form-control md-textarea"></textarea>
+                                    <textarea type="text" name="message" id="message" rows="2" class="form-control md-textarea"></textarea>
                                     <label for="message">Your message</label>
 
                                 </div>
@@ -268,7 +268,7 @@
                         </div>                       
                     </form>
                     <div class="text-center text-md-left">
-                        <a class="btn btn-primary" >Submit</a>
+                        <a><button class="btn btn-primary" type="submit">Submit</button></a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center mt-3">
@@ -301,9 +301,37 @@
 </section>
 <!-- javascript links are here -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+$("form[name='registration']").validate({
+
+  rules: {
+
+    name: "required",
+    email: {
+      required: true,
+      email: true
+    },
+    subject:{
+        required:true
+    }
+  },
+
+  messages: {
+    kname: "Please enter your firstname",
+    email: "Please enter a valid email address",
+    subject: "Please enter a valid subject"
+  },
+  submitHandler: function(form) {
+    form.submit();
+  }
+});
+});
+</script>
+
 </body>
 </html>
